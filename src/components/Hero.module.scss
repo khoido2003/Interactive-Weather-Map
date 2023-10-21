@@ -1,0 +1,61 @@
+@use "../index.scss" as *;
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+
+.hero {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  gap: 1rem;
+
+  &__title {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 10rem;
+    // text-transform: uppercase;
+    font-weight: 600;
+    font-family: "Anton", sans-serif;
+    letter-spacing: -0.7px;
+    animation: titleFlyIn 1s ease forwards 1;
+  }
+
+  &__tabs {
+    grid-column: 1 / -1;
+  }
+}
+
+@keyframes titleFlyIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.btn--start {
+  display: block;
+  width: 60%;
+  background-color: $color-primary-dark;
+  border-radius: 9px;
+  margin: 0 auto;
+  text-align: center;
+  text-decoration: none;
+  padding: 2rem;
+  font-size: 1.6rem;
+
+  &:link,
+  &:visited {
+    color: $color-secondary;
+  }
+
+  &:hover span {
+    margin-left: 1rem;
+  }
+
+  &:focus {
+    transform: translateY(4px);
+    transition: all 0.2s ease-in;
+    box-shadow: 0rem 0.8rem 2.8rem #b9b8b8;
+  }
+}

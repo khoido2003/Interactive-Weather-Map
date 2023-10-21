@@ -1,0 +1,36 @@
+@use "../index.scss" as *;
+
+.mapContainer {
+  height: 100%;
+}
+
+.map {
+  height: 100%;
+}
+
+:global(.leaflet-popup .leaflet-popup-content-wrapper) {
+  background-color: $color-primary-dark;
+  color: #fff;
+  border-radius: 5px;
+  padding-right: 0.6rem;
+}
+
+:global(.leaflet-popup .leaflet-popup-content) {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+:global(.leaflet-popup .leaflet-popup-content span:first-child) {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+:global(.leaflet-popup .leaflet-popup-tip) {
+  background-color: $color-primary-dark;
+}
+
+:global(.leaflet-popup-content-wrapper) {
+  border-left: 10px solid #f3c247;
+}

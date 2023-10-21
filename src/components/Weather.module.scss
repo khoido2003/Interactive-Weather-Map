@@ -1,0 +1,48 @@
+@use "../index.scss" as *;
+
+.container {
+  width: 95%;
+  height: 55rem;
+  margin: 0 auto;
+  color: #fff;
+
+  h2 {
+    margin-top: 3rem;
+    font-size: 2.3rem;
+
+    span {
+      color: $color-primary-dark;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.weather {
+  height: 30rem;
+  margin-top: 9rem;
+  list-style: none;
+  display: flex;
+  gap: 2.4rem;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: wrap;
+
+  overflow-y: scroll;
+}
+
+.day {
+  background-color: $color-primary-dark;
+  padding: 1.8rem 0 2rem;
+  width: 12.8rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+
+  span {
+    font-size: 5.2rem;
+  }
+}

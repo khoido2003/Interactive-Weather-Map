@@ -1,0 +1,136 @@
+@use "../index.scss" as *;
+
+.container {
+  height: calc(100% - 8rem);
+  width: 52rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+  background-color: $map-background-1;
+  padding: 3rem;
+  animation: flyIn cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.6s 1;
+
+  h1 {
+    margin: 0 auto;
+    width: 20rem;
+    text-align: center;
+    border-radius: 9px;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+  }
+
+  h5 {
+    text-align: center;
+    color: #ffffff;
+    width: 27rem;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+  }
+}
+
+@keyframes flyIn {
+  from {
+    opacity: 0;
+    height: 13px;
+    // transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    // transform: translateX(0);
+  }
+}
+
+.locationList {
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  gap: 2rem;
+  overflow-y: scroll;
+  height: 80%;
+  padding: 3rem;
+  margin-bottom: 3.5rem;
+}
+
+.locationItem {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+  background-color: #12b886a0;
+  color: $color-secondary;
+  padding: 3rem;
+  cursor: pointer;
+
+  .city {
+    width: 15rem;
+  }
+  p {
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+}
+
+footer {
+  margin: 0 auto;
+  text-align: center;
+  color: #999;
+  font-size: 1.1rem;
+}
+
+@mixin btn {
+  border: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  &:hover {
+    background-color: #fa5252;
+    color: #fff;
+  }
+
+  &:focus {
+    transform: translateY(5px);
+  }
+}
+
+.btn--close {
+  @include btn;
+
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 600;
+  background-color: #ff6b6b;
+
+  position: absolute;
+  right: 1.8rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  padding: 1.6rem;
+  border-radius: 50%;
+}
+
+.btn-item--close {
+  @include btn;
+
+  background-color: #99999976;
+  color: #ffffffa6;
+
+  padding: 0.8rem;
+  border-radius: 5px;
+}
+
+///////////////////////
+
+.active {
+  background-color: #fab005;
+  border: 3px solid #fff;
+}
+
+.link {
+  text-decoration: none;
+}

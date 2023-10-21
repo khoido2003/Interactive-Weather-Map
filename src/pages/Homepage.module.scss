@@ -1,0 +1,10 @@
+@use "../index.scss" as *;
+
+.container {
+  max-width: 120rem;
+  border-radius: 20px;
+  height: 80vh;
+  margin: 5% auto;
+  background-color: $color-secondary;
+  overflow: hidden;
+}

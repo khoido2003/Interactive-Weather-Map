@@ -1,0 +1,36 @@
+@use "../index.scss" as *;
+
+.tabContent {
+  padding: 5rem 15rem;
+
+  h3 {
+    font-size: 1.8rem;
+    animation: flyInH3 1s ease-in-out forwards 1; /* Added 'forwards' and '1' for one iteration */
+  }
+
+  p {
+    color: #a8a6a6;
+    font-size: 1.4rem;
+    animation: flyInP 1s ease forwards 1; /* Added 'forwards' and '1' for one iteration */
+  }
+}
+
+@keyframes flyInH3 {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes flyInP {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

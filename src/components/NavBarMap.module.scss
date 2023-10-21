@@ -1,0 +1,114 @@
+@use "../index.scss" as *;
+
+.container {
+  position: absolute;
+  bottom: 0;
+  z-index: 9999;
+  background-color: $map-background-1;
+  width: 100%;
+  height: 8rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border: 2px solid $map-background-1;
+
+  input {
+    width: 40%;
+    padding: 1.3rem;
+    border-radius: 9px;
+    border: none;
+    font-family: inherit;
+
+    &:focus {
+      outline: none;
+      border: 2px solid $color-primary-dark;
+    }
+
+    &::placeholder {
+      color: #999;
+    }
+  }
+}
+
+.btnContainer {
+  display: flex;
+  gap: 2rem;
+
+  @media only screen and (max-width: $bp-small) {
+    display: none;
+  }
+  .btn {
+    border: none;
+    padding: 1.3rem 3rem;
+    color: $color-secondary;
+    background-color: $color-primary-dark;
+    border-radius: 9px;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+
+    &:hover {
+      background-color: $color-primary-light;
+    }
+
+    &:active {
+      transform: translateY(2px);
+      background-color: $color-primary-dark;
+    }
+  }
+
+  .btn--warning {
+    background-color: #fa5252;
+
+    &:hover {
+      background-color: #ff6b6b;
+    }
+  }
+}
+
+////////////////////////////
+///
+
+// RESPONSIVE
+
+.btn--small-screen {
+  display: none;
+
+  @media only screen and (max-width: $bp-small) {
+    display: block;
+    background-color: $color-primary;
+    border: none;
+    cursor: pointer;
+    svg {
+      height: 3rem;
+      width: 3rem;
+      color: #fff;
+    }
+  }
+}
+
+.btnContainer--small-screen {
+  display: none;
+
+  @media only screen and (max-width: $bp-small) {
+    display: flex;
+    gap: 0.9rem;
+    position: absolute;
+    top: -20rem;
+    right: 1rem;
+    flex-direction: column;
+
+    .btn {
+      background-color: $color-primary;
+      color: #fff;
+      border: none;
+      padding: 3rem;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  }
+}

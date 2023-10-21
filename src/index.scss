@@ -1,0 +1,79 @@
+@import "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap");
+
+@import "variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: "Fira Sans", sans-serif;
+  color: $color-primary;
+  font-weight: 400;
+  line-height: 1.6;
+  background-image: linear-gradient(to right, #38d9a946, #96f2d647),
+    url("/public/background/background1.jpg");
+  background-size: cover;
+  background-position: center;
+  // background-repeat: no-repeat;
+  // height: 100%;
+  min-height: 100%;
+
+  @media only screen and (max-width: $bp-small) {
+    background-image: linear-gradient(
+      to right,
+      $color-primary-light,
+      $color-primary-light
+    );
+  }
+}
+
+///////////////////////
+///
+///
+// Custom web scrollbar
+
+/* Customize the scrollbar track (the area where the scrollbar moves) */
+::-webkit-scrollbar {
+  width: 5px; /* Width of the vertical scrollbar */
+  height: 5px; /* Height of the horizontal scrollbar */
+}
+
+/* Customize the vertical scrollbar thumb */
+::-webkit-scrollbar-thumb:vertical {
+  background-color: $color-primary-dark-1; /* Background color of the vertical thumb */
+  border-radius: 6px; /* Rounded corners for the vertical thumb */
+}
+
+/* Customize the vertical scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:vertical:hover {
+  background-color: $color-primary-dark-1; /* Background color of the vertical thumb on hover */
+}
+
+/* Customize the horizontal scrollbar thumb */
+::-webkit-scrollbar-thumb:horizontal {
+  background-color: $color-primary-dark-1; /* Background color of the horizontal thumb */
+  border-radius: 6px; /* Rounded corners for the horizontal thumb */
+}
+
+/* Customize the horizontal scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:horizontal:hover {
+  background-color: $color-primary-dark-2; /* Background color of the horizontal thumb on hover */
+}
+
+/* Customize the scrollbar track when it's not actively being scrolled */
+::-webkit-scrollbar-track {
+  background-color: $color-secondary; /* Background color of the track */
+}

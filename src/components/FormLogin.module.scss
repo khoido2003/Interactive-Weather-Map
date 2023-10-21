@@ -1,0 +1,157 @@
+@use "../index.scss" as *;
+@import url("https://fonts.googleapis.com/css?family=Rubik:400,500&display=swap");
+
+body {
+  font-family: "Rubik", sans-serif;
+}
+
+.container {
+  display: flex;
+  height: 70rem;
+  margin-top: 3rem;
+  gap: 1rem;
+}
+
+.left {
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  animation-name: left;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: 1s;
+  background-color: #f5f6eab3;
+  gap: 2rem;
+  border-radius: 9px;
+}
+
+.right {
+  flex: 1;
+  background-color: black;
+  transition: 1s;
+  background-image: url("/public/login/login.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 9px;
+  border: 2px solid $color-primary-dark;
+}
+
+.header > h2 {
+  margin: 0;
+  color: $color-primary-dark;
+  margin-top: 3rem;
+}
+
+.header > h4 {
+  margin-top: 1rem;
+  font-weight: normal;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.form {
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form > p {
+  text-align: right;
+}
+
+.form > p > a {
+  color: #000;
+  font-size: 1.4rem;
+}
+
+.form-field {
+  height: 4.6rem;
+  padding: 0 16px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  font-family: "Rubik", sans-serif;
+  outline: 0;
+  transition: 0.2s;
+  margin-top: 2rem;
+}
+
+.form-field:focus {
+  border-color: $color-primary-dark;
+}
+
+.form > button {
+  padding: 1.2rem 1rem;
+  border: 0;
+  background: linear-gradient(
+    to right,
+    $color-primary-dark 0%,
+    $color-primary 100%
+  );
+  border-radius: 3px;
+  margin-top: 1rem;
+  color: #fff;
+  letter-spacing: 1px;
+  font-family: "Rubik", sans-serif;
+  cursor: pointer;
+  margin-top: 3rem;
+}
+
+.animation {
+  animation-name: move;
+  animation-duration: 0.4s;
+  animation-fill-mode: both;
+  animation-delay: 2s;
+}
+
+.a1 {
+  animation-delay: 2s;
+}
+
+.a2 {
+  animation-delay: 2.1s;
+}
+
+.a3 {
+  animation-delay: 2.2s;
+}
+
+.a4 {
+  animation-delay: 2.3s;
+}
+
+.a5 {
+  animation-delay: 2.4s;
+}
+
+.a6 {
+  animation-delay: 2.5s;
+}
+
+@keyframes move {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-40px);
+  }
+
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+@keyframes left {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+
+  100% {
+    opacity: 1;
+    padding: 2rem 4rem;
+    width: 44rem;
+  }
+}
