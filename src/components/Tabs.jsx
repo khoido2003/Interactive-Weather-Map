@@ -1,6 +1,5 @@
-import { useContext } from "react";
 import styles from "./Tabs.module.scss";
-import { useTabs } from "../contexts/tabsContext";
+import { useTabs } from "../contexts/TabsContext";
 
 function Tabs() {
   const { content } = useTabs();
