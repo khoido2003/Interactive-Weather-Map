@@ -1,6 +1,6 @@
 import { useMemo, useState, useEffect, useCallback } from "react";
 import styles from "./TabContent.module.scss";
-import { useTabs } from "../contexts/tabsContext";
+import { useTabs } from "../contexts/TabsContext";
 
 function TabContent() {
   const { content, activeTab } = useTabs();
