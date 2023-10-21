@@ -6,7 +6,7 @@ import Tabs from "./Tabs";
 import TabContent from "./TabContent";
 
 // Tabscontext
-import { TabsProvider } from "../contexts/tabsContext";
+import { TabsProvider } from "../contexts/TabsContext";
 
 function Hero() {
   return (
