@@ -2,6 +2,7 @@
 
 ![SkyCrafters Weather Map](/public/github-picture/mainScreen.png)
 ![SkyCrafters Weather Map](/public/github-picture/mapScreen.png)
+![SkyCrafters Weather Map](/public/github-picture/mapScreen2.png)
 
 ## Project Description
 
