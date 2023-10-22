@@ -1,6 +1,7 @@
 # SkyCrafters Interactive Weather Map
 
 ![SkyCrafters Weather Map](/public/github-picture/mainScreen.png)
+![SkyCrafters Weather Map](/public/github-picture/mapScreen.png)
 
 ## Project Description
 
